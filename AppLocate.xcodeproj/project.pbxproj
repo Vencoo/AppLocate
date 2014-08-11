@@ -22,6 +22,7 @@
 		A28740A61998A30500DC9655 /* AppLocateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A28740A51998A30500DC9655 /* AppLocateTests.m */; };
 		A28740B81998A39200DC9655 /* ALBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28740B71998A39200DC9655 /* ALBaseViewController.m */; };
 		A28740BB1998A3C000DC9655 /* ALBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A28740BA1998A3C000DC9655 /* ALBaseModel.m */; };
+		D72AAB921998AA4E009EFBC0 /* ALMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D72AAB911998AA4E009EFBC0 /* ALMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		A28740B71998A39200DC9655 /* ALBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALBaseViewController.m; sourceTree = "<group>"; };
 		A28740B91998A3C000DC9655 /* ALBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALBaseModel.h; sourceTree = "<group>"; };
 		A28740BA1998A3C000DC9655 /* ALBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALBaseModel.m; sourceTree = "<group>"; };
+		D72AAB901998AA4E009EFBC0 /* ALMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMainViewController.h; sourceTree = "<group>"; };
+		D72AAB911998AA4E009EFBC0 /* ALMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +205,8 @@
 			children = (
 				A28740B61998A39200DC9655 /* ALBaseViewController.h */,
 				A28740B71998A39200DC9655 /* ALBaseViewController.m */,
+				D72AAB901998AA4E009EFBC0 /* ALMainViewController.h */,
+				D72AAB911998AA4E009EFBC0 /* ALMainViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			files = (
 				A28740871998A30500DC9655 /* main.m in Sources */,
 				A28740BB1998A3C000DC9655 /* ALBaseModel.m in Sources */,
+				D72AAB921998AA4E009EFBC0 /* ALMainViewController.m in Sources */,
 				A28740B81998A39200DC9655 /* ALBaseViewController.m in Sources */,
 				A287408B1998A30500DC9655 /* ALAppDelegate.m in Sources */,
 			);
@@ -519,6 +525,7 @@
 				A28740AB1998A30500DC9655 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A28740AC1998A30500DC9655 /* Build configuration list for PBXNativeTarget "AppLocateTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +534,7 @@
 				A28740AE1998A30500DC9655 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
