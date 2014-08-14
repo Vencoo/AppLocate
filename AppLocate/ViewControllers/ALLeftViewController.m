@@ -7,7 +7,11 @@
 //
 
 #import "ALLeftViewController.h"
-#define kWidth  self.view.bounds.size.width
+
+#define searchBtn   301
+#define favoriteBtn 302
+#define settingBtn  303
+
 @interface ALLeftViewController ()
 {
     UIButton *_searchButton;
@@ -37,39 +41,47 @@
     _searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _searchButton.frame = CGRectMake(0, 0, 100, 100);
     [_searchButton setImage:[UIImage imageNamed:@"btn_search.png"] forState:UIControlStateNormal];
+    [_searchButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    _searchButton.tag = searchBtn;
     _searchButton.center = CGPointMake(75, 20+height/2.0);
     [self.view addSubview:_searchButton];
     
     _favoriteButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _favoriteButton.frame = CGRectMake(0, 0, 100, 100);
     [_favoriteButton setImage:[UIImage imageNamed:@"btn_favorite.png"] forState:UIControlStateNormal];
+    [_favoriteButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    _favoriteButton.tag = favoriteBtn;
     _favoriteButton.center = CGPointMake(75, 20+height+height/2.0);
     [self.view addSubview:_favoriteButton];
     
     _settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _settingButton.frame = CGRectMake(0, 0, 100, 100);
     [_settingButton setImage:[UIImage imageNamed:@"btn_setting.png"] forState:UIControlStateNormal];
+    [_settingButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    _settingButton.tag = settingBtn;
     _settingButton.center = CGPointMake(75, 20+height+height+height/2.0);
     [self.view addSubview:_settingButton];
 
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
+- (void)buttonClick:(UIButton *)button
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    switch (button.tag) {
+        case settingBtn:
+        {
+            [self.delegate presentSettingViewController];
+        }
+            break;
+        case favoriteBtn:
+        {
+            [self.delegate presentCollectViewController];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

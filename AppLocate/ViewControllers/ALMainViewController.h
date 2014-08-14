@@ -9,8 +9,8 @@
 
 #import "ALBaseViewController.h"
 #import "ALDetailViewController.h"
+#import "ALLeftViewController.h"
 
-@interface ALMainViewController : ALBaseViewController<detailViewControllerDelegate>
-
+@interface ALMainViewController : ALBaseViewController<detailViewControllerDelegate,leftViewControllerDelegate>
 
 @end

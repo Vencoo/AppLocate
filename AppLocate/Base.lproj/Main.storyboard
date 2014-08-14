@@ -97,60 +97,10 @@
             </objects>
             <point key="canvasLocation" x="427" y="-16"/>
         </scene>
-        <!--Goods List View Controller-->
-        <scene sceneID="w3j-bZ-SPd">
-            <objects>
-                <viewController storyboardIdentifier="ALGoodsListViewController" id="gYT-G5-xxW" customClass="ALGoodsListViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dFm-s0-JJu"/>
-                        <viewControllerLayoutGuide type="bottom" id="lG6-fG-wUD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1x9-eJ-UUw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="店铺缩略图.png" translatesAutoresizingMaskIntoConstraints="NO" id="kg1-qF-w63">
-                                <rect key="frame" x="0.0" y="20" width="320" height="120"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="6fI-Hs-1Hd"/>
-                                    <constraint firstAttribute="width" constant="320" id="YEc-A2-xHK"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="Z02-ug-DL1"/>
-                                </constraints>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FKO-D0-Tn3">
-                                <rect key="frame" x="0.0" y="140" width="320" height="480"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="NcR-RD-1PP"/>
-                                </constraints>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="FKO-D0-Tn3" firstAttribute="leading" secondItem="1x9-eJ-UUw" secondAttribute="leading" id="ERj-Uc-O9a"/>
-                            <constraint firstItem="FKO-D0-Tn3" firstAttribute="top" secondItem="kg1-qF-w63" secondAttribute="bottom" id="HEV-HL-2yu"/>
-                            <constraint firstItem="FKO-D0-Tn3" firstAttribute="leading" secondItem="kg1-qF-w63" secondAttribute="leading" id="VG7-Qc-0It"/>
-                            <constraint firstItem="kg1-qF-w63" firstAttribute="top" secondItem="dFm-s0-JJu" secondAttribute="bottom" id="hZd-PH-2DX"/>
-                            <constraint firstAttribute="bottom" secondItem="FKO-D0-Tn3" secondAttribute="bottom" constant="-52" id="j0o-qZ-sRO"/>
-                            <constraint firstItem="kg1-qF-w63" firstAttribute="top" secondItem="dFm-s0-JJu" secondAttribute="bottom" id="xpB-Sw-t25"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="imageView" destination="kg1-qF-w63" id="7bW-O6-46f"/>
-                        <outlet property="tableView" destination="FKO-D0-Tn3" id="wFv-4X-sJN"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="af9-4K-PPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="771" y="-35"/>
-        </scene>
     </scenes>
     <resources>
         <image name="2.jpg" width="61" height="110"/>
         <image name="bg_dowm.png" width="640" height="100"/>
-        <image name="店铺缩略图.png" width="640" height="220"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

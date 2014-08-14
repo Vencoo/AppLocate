@@ -11,6 +11,8 @@
 #import "ALLeftViewController.h"
 #import "ALDetailViewController.h"
 #import "ALGoodsListViewController.h"
+#import "ALSettingViewController.h"
+#import "ALCollectViewController.h"
 
 #define btnListOpen   101
 #define btnListClose  110
@@ -24,6 +26,8 @@
     ALLeftViewController *_leftVC;
     ALDetailViewController *_detailVC;
     ALGoodsListViewController *_goodsListVC;
+    ALSettingViewController *_settingVC;
+    ALCollectViewController *_collecVC;
     
     ALToolBarView *_toolBarView;
     
@@ -83,6 +87,7 @@
             button.userInteractionEnabled = NO;
             if (_leftVC == nil) {
                  _leftVC = [[ALLeftViewController alloc]init];
+                 _leftVC.delegate = self;
             }
             _leftVC.view.alpha = 0.7;
             _leftVC.view.backgroundColor = [UIColor darkGrayColor];
@@ -91,6 +96,10 @@
             [self.view bringSubviewToFront:_navButton];
             [UIView animateWithDuration:0.2 animations:^{
                 _leftVC.view.frame = CGRectMake(0, IOSVersion>=7.0?20:0, 150, KDeviceHeight-20-64);
+                if (_upButton.tag == btnDown) {
+                    _detailVC.view.frame = CGRectMake(kDeviceWidth, IOSVersion>=7.0?KDeviceHeight-64-200:KDeviceHeight-64-220, 70, 200);
+                    _upButton.tag = btnUp;
+                }
             } completion:^(BOOL finished) {
                 button.userInteractionEnabled = YES;
                 button.tag = btnListClose;
@@ -122,7 +131,6 @@
             if (_detailVC == nil) {
                 _detailVC = [[ALDetailViewController alloc]init];
                 _detailVC.delegate = self;
-
             }
             _detailVC.view.alpha = 0.7;
             _detailVC.view.backgroundColor = [UIColor darkGrayColor];
@@ -131,6 +139,10 @@
             [self.view addSubview:_detailVC.view];
             [UIView animateWithDuration:0.2 animations:^{
                 _detailVC.view.frame = CGRectMake(kDeviceWidth-70, IOSVersion>=7.0?KDeviceHeight-64-200:KDeviceHeight-64-220, 70,200);
+                if (_listButton.tag == btnListClose) {
+                    _leftVC.view.frame = CGRectMake(-150, IOSVersion>=7.0?20:0, 150, KDeviceHeight-20-64);
+                    _listButton.tag = btnListOpen;
+                }
             } completion:^(BOOL finished) {
                 button.userInteractionEnabled = YES;
                 button.tag = btnDown;
@@ -186,29 +198,53 @@
 - (void)presentGoodsListViewController
 {
     if (_goodsListVC == nil) {
-      
-        
-        UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        _goodsListVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"ALGoodsListViewController"];
-        UIImageView *bgDownImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, IOSVersion>=7.0?KDeviceHeight-64:KDeviceHeight-64-20, kDeviceWidth, 64)];
-        bgDownImageView.userInteractionEnabled = YES;
-        bgDownImageView.image = [UIImage imageNamed:@"bg_dowm.png"];
-        [_goodsListVC.view addSubview:bgDownImageView];
-        
-        UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [backButton setImage:[UIImage imageNamed:@"btn_back"] forState:UIControlStateNormal];
-        backButton.frame = CGRectMake(10,12 , 40, 40);
-        backButton.tag = btnBack;
-        [backButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [bgDownImageView addSubview:backButton];
-        
-
+        _goodsListVC = [[ALGoodsListViewController alloc]init];
+        [self bgDownViewAddInViewController:_goodsListVC];
     }
     [_goodsListVC tap];
     [self presentViewController:_goodsListVC animated:YES completion:^{
     
     
     }];
+}
+
+- (void)presentSettingViewController
+{
+    if (_settingVC == nil) {
+        _settingVC = [[ALSettingViewController alloc]init];
+    }
+    [self presentViewController:_settingVC animated:YES completion:^{
+        
+        
+    }];
+}
+
+- (void)presentCollectViewController
+{
+    if (_collecVC == nil) {
+        _collecVC = [[ALCollectViewController alloc]init];
+        [self bgDownViewAddInViewController:_collecVC];
+    }
+    [self presentViewController:_collecVC animated:YES completion:^{
+        
+        
+    }];
+
+}
+
+- (void)bgDownViewAddInViewController:(UIViewController*)viewController
+{
+    UIImageView *bgDownImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, IOSVersion>=7.0?KDeviceHeight-64:KDeviceHeight-64-20, kDeviceWidth, 64)];
+    bgDownImageView.userInteractionEnabled = YES;
+    bgDownImageView.image = [UIImage imageNamed:@"bg_dowm.png"];
+    [viewController.view addSubview:bgDownImageView];
+    
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backButton setImage:[UIImage imageNamed:@"btn_back"] forState:UIControlStateNormal];
+    backButton.frame = CGRectMake(10,12 , 40, 40);
+    backButton.tag = btnBack;
+    [backButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [bgDownImageView addSubview:backButton];
 }
 
 

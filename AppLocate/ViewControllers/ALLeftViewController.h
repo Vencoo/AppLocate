@@ -8,6 +8,15 @@
 
 #import "ALBaseViewController.h"
 
+@protocol leftViewControllerDelegate <NSObject>
+
+- (void)presentSettingViewController;
+- (void)presentCollectViewController;
+
+@end
+
 @interface ALLeftViewController : ALBaseViewController
+
+@property(nonatomic,assign)id<leftViewControllerDelegate>delegate;
 
 @end

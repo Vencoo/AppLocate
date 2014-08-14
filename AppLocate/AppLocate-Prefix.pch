@@ -12,6 +12,7 @@
 
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
+    #import "UIViewExt.h"
     #import <Foundation/Foundation.h>
 #endif
 

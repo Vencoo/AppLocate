@@ -10,7 +10,7 @@
 
 
 
-@interface ALGoodsListViewController : ALBaseViewController<UITableViewDataSource,UITableViewDelegate>
+@interface ALGoodsListViewController : ALBaseViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 
 - (void)tap;
 @end

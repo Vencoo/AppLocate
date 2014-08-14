@@ -67,8 +67,8 @@
         {
             [self.delegate presentGoodsListViewController];
         }
-            
             break;
+            
             
         default:
             break;
