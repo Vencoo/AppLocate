@@ -78,6 +78,11 @@
             [self.delegate presentCollectViewController];
         }
             break;
+        case searchBtn:
+        {
+            [self.delegate presentLocateViewController];
+        }
+            break;
             
         default:
             break;

@@ -12,6 +12,7 @@
 
 - (void)presentSettingViewController;
 - (void)presentCollectViewController;
+- (void)presentLocateViewController;
 
 @end
 

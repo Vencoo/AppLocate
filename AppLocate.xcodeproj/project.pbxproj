@@ -41,6 +41,10 @@
 		D72AAC171998D331009EFBC0 /* 1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D72AAC151998D331009EFBC0 /* 1@2x.jpg */; };
 		D72AAC181998D331009EFBC0 /* 2@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D72AAC161998D331009EFBC0 /* 2@2x.jpg */; };
 		D72AAC1B1998D417009EFBC0 /* ALGoodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D72AAC1A1998D417009EFBC0 /* ALGoodsListViewController.m */; };
+		D7827BF1199DB6A600E17926 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7827BF0199DB6A600E17926 /* CoreBluetooth.framework */; };
+		D7827BF3199DB6B400E17926 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7827BF2199DB6B400E17926 /* CoreLocation.framework */; };
+		D7827BF6199DB73100E17926 /* APLDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = D7827BF5199DB73100E17926 /* APLDefaults.m */; };
+		D7827BF9199DD15300E17926 /* ALLocateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7827BF8199DD15300E17926 /* ALLocateViewController.m */; };
 		D7BB2EBD199AF95400F03CCD /* ibeacon搜索.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7BB2EBC199AF95400F03CCD /* ibeacon搜索.jpg */; };
 		D7BB2EC7199B553000F03CCD /* 店铺缩略图.png in Resources */ = {isa = PBXBuildFile; fileRef = D7BB2EC6199B553000F03CCD /* 店铺缩略图.png */; };
 		D7BB2EC9199B553500F03CCD /* 店铺弹出消息.png in Resources */ = {isa = PBXBuildFile; fileRef = D7BB2EC8199B553500F03CCD /* 店铺弹出消息.png */; };
@@ -115,6 +119,12 @@
 		D72AAC161998D331009EFBC0 /* 2@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2@2x.jpg"; sourceTree = "<group>"; };
 		D72AAC191998D417009EFBC0 /* ALGoodsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALGoodsListViewController.h; sourceTree = "<group>"; };
 		D72AAC1A1998D417009EFBC0 /* ALGoodsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALGoodsListViewController.m; sourceTree = "<group>"; };
+		D7827BF0199DB6A600E17926 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		D7827BF2199DB6B400E17926 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D7827BF4199DB73100E17926 /* APLDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLDefaults.h; sourceTree = "<group>"; };
+		D7827BF5199DB73100E17926 /* APLDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLDefaults.m; sourceTree = "<group>"; };
+		D7827BF7199DD15300E17926 /* ALLocateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALLocateViewController.h; sourceTree = "<group>"; };
+		D7827BF8199DD15300E17926 /* ALLocateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALLocateViewController.m; sourceTree = "<group>"; };
 		D7BB2EBC199AF95400F03CCD /* ibeacon搜索.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ibeacon搜索.jpg"; sourceTree = "<group>"; };
 		D7BB2EC6199B553000F03CCD /* 店铺缩略图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "店铺缩略图.png"; sourceTree = "<group>"; };
 		D7BB2EC8199B553500F03CCD /* 店铺弹出消息.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "店铺弹出消息.png"; sourceTree = "<group>"; };
@@ -147,6 +157,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7827BF3199DB6B400E17926 /* CoreLocation.framework in Frameworks */,
+				D7827BF1199DB6A600E17926 /* CoreBluetooth.framework in Frameworks */,
 				A287407D1998A30500DC9655 /* CoreGraphics.framework in Frameworks */,
 				A287407F1998A30500DC9655 /* UIKit.framework in Frameworks */,
 				A287407B1998A30400DC9655 /* Foundation.framework in Frameworks */,
@@ -188,6 +200,8 @@
 		A28740791998A30400DC9655 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7827BF2199DB6B400E17926 /* CoreLocation.framework */,
+				D7827BF0199DB6A600E17926 /* CoreBluetooth.framework */,
 				A287407A1998A30400DC9655 /* Foundation.framework */,
 				A287407C1998A30500DC9655 /* CoreGraphics.framework */,
 				A287407E1998A30500DC9655 /* UIKit.framework */,
@@ -277,6 +291,8 @@
 				D7D483EB199C7F8E00223DF1 /* ALSettingViewController.m */,
 				D7D483F0199CAB2E00223DF1 /* ALCollectViewController.h */,
 				D7D483F1199CAB2E00223DF1 /* ALCollectViewController.m */,
+				D7827BF7199DD15300E17926 /* ALLocateViewController.h */,
+				D7827BF8199DD15300E17926 /* ALLocateViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -340,6 +356,8 @@
 		D7D483E5199C7B0B00223DF1 /* Globals */ = {
 			isa = PBXGroup;
 			children = (
+				D7827BF4199DB73100E17926 /* APLDefaults.h */,
+				D7827BF5199DB73100E17926 /* APLDefaults.m */,
 				D7D483E6199C7B1C00223DF1 /* UIViewExt.h */,
 				D7D483E7199C7B1C00223DF1 /* UIViewExt.m */,
 			);
@@ -409,6 +427,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Vencoo;
 				TargetAttributes = {
+					A28740761998A30400DC9655 = {
+						DevelopmentTeam = W64H86P59A;
+					};
 					A28740971998A30500DC9655 = {
 						TestTargetID = A28740761998A30400DC9655;
 					};
@@ -484,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7D483F2199CAB2E00223DF1 /* ALCollectViewController.m in Sources */,
+				D7827BF9199DD15300E17926 /* ALLocateViewController.m in Sources */,
 				D72AABEA1998B080009EFBC0 /* ALLeftViewController.m in Sources */,
 				A28740871998A30500DC9655 /* main.m in Sources */,
 				D7E6A1361999D9E200E40536 /* ALToolBarView.m in Sources */,
@@ -494,6 +516,7 @@
 				D72AAC1B1998D417009EFBC0 /* ALGoodsListViewController.m in Sources */,
 				D72AABEF1998C468009EFBC0 /* ALDetailViewController.m in Sources */,
 				A28740BB1998A3C000DC9655 /* ALBaseModel.m in Sources */,
+				D7827BF6199DB73100E17926 /* APLDefaults.m in Sources */,
 				D72AAB921998AA4E009EFBC0 /* ALMainViewController.m in Sources */,
 				D7D483FA199CB66000223DF1 /* ALCollectViewCell.m in Sources */,
 				D7D483D8199C591B00223DF1 /* CycleScrollView.m in Sources */,

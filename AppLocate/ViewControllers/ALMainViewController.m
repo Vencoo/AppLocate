@@ -13,6 +13,7 @@
 #import "ALGoodsListViewController.h"
 #import "ALSettingViewController.h"
 #import "ALCollectViewController.h"
+#import "ALLocateViewController.h"
 
 #define btnListOpen   101
 #define btnListClose  110
@@ -28,6 +29,7 @@
     ALGoodsListViewController *_goodsListVC;
     ALSettingViewController *_settingVC;
     ALCollectViewController *_collecVC;
+    ALLocateViewController *_locateVC;
     
     ALToolBarView *_toolBarView;
     
@@ -195,6 +197,7 @@
     }
 }
 
+#pragma mark - presentControllers
 - (void)presentGoodsListViewController
 {
     if (_goodsListVC == nil) {
@@ -212,6 +215,7 @@
 {
     if (_settingVC == nil) {
         _settingVC = [[ALSettingViewController alloc]init];
+        [self bgDownViewAddInViewController:_settingVC];
     }
     [self presentViewController:_settingVC animated:YES completion:^{
         
@@ -232,6 +236,20 @@
 
 }
 
+- (void)presentLocateViewController
+{
+    if (_locateVC == nil) {
+        _locateVC = [[ALLocateViewController alloc]init];
+        [self bgDownViewAddInViewController:_locateVC];
+    }
+    [self presentViewController:_locateVC animated:YES completion:^{
+        
+        
+    }];
+
+}
+
+//添加返回界面
 - (void)bgDownViewAddInViewController:(UIViewController*)viewController
 {
     UIImageView *bgDownImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, IOSVersion>=7.0?KDeviceHeight-64:KDeviceHeight-64-20, kDeviceWidth, 64)];
