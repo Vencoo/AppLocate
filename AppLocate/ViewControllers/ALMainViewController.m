@@ -171,12 +171,12 @@
         case btnNav:
         {
             //改变背景图片
-            static int i = 1;
-            NSString *imageStrng = [NSString stringWithFormat:@"%d.jpg",i];
+            static int indexOfImage = 1;
+            NSString *imageStrng = [NSString stringWithFormat:@"%d.jpg",indexOfImage];
             _backgroundImageView.image = [UIImage imageNamed:imageStrng];
-            i++;
-            if (i == 3) {
-                i = 1;
+            indexOfImage++;
+            if (indexOfImage == 4) {
+                indexOfImage = 1;
             }
         }
             break;
