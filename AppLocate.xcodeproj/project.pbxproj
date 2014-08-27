@@ -45,6 +45,7 @@
 		D7827BF3199DB6B400E17926 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7827BF2199DB6B400E17926 /* CoreLocation.framework */; };
 		D7827BF6199DB73100E17926 /* APLDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = D7827BF5199DB73100E17926 /* APLDefaults.m */; };
 		D7827BF9199DD15300E17926 /* ALLocateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7827BF8199DD15300E17926 /* ALLocateViewController.m */; };
+		D7827BFF199DF42E00E17926 /* UUIDPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7827BFE199DF42E00E17926 /* UUIDPlist.plist */; };
 		D7BB2EBD199AF95400F03CCD /* ibeacon搜索.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7BB2EBC199AF95400F03CCD /* ibeacon搜索.jpg */; };
 		D7BB2EC7199B553000F03CCD /* 店铺缩略图.png in Resources */ = {isa = PBXBuildFile; fileRef = D7BB2EC6199B553000F03CCD /* 店铺缩略图.png */; };
 		D7BB2EC9199B553500F03CCD /* 店铺弹出消息.png in Resources */ = {isa = PBXBuildFile; fileRef = D7BB2EC8199B553500F03CCD /* 店铺弹出消息.png */; };
@@ -60,7 +61,6 @@
 		D7D483F2199CAB2E00223DF1 /* ALCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D483F1199CAB2E00223DF1 /* ALCollectViewController.m */; };
 		D7D483F7199CB04100223DF1 /* ALCollectViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7D483F6199CB04100223DF1 /* ALCollectViewCell.xib */; };
 		D7D483FA199CB66000223DF1 /* ALCollectViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D483F9199CB66000223DF1 /* ALCollectViewCell.m */; };
-		D7E6A1361999D9E200E40536 /* ALToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6A1351999D9E200E40536 /* ALToolBarView.m */; };
 		D7E6A138199A143600E40536 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7E6A137199A143600E40536 /* 3.jpg */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +125,7 @@
 		D7827BF5199DB73100E17926 /* APLDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLDefaults.m; sourceTree = "<group>"; };
 		D7827BF7199DD15300E17926 /* ALLocateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALLocateViewController.h; sourceTree = "<group>"; };
 		D7827BF8199DD15300E17926 /* ALLocateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALLocateViewController.m; sourceTree = "<group>"; };
+		D7827BFE199DF42E00E17926 /* UUIDPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UUIDPlist.plist; sourceTree = "<group>"; };
 		D7BB2EBC199AF95400F03CCD /* ibeacon搜索.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ibeacon搜索.jpg"; sourceTree = "<group>"; };
 		D7BB2EC6199B553000F03CCD /* 店铺缩略图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "店铺缩略图.png"; sourceTree = "<group>"; };
 		D7BB2EC8199B553500F03CCD /* 店铺弹出消息.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "店铺弹出消息.png"; sourceTree = "<group>"; };
@@ -147,8 +148,6 @@
 		D7D483F6199CB04100223DF1 /* ALCollectViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALCollectViewCell.xib; sourceTree = "<group>"; };
 		D7D483F8199CB66000223DF1 /* ALCollectViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCollectViewCell.h; sourceTree = "<group>"; };
 		D7D483F9199CB66000223DF1 /* ALCollectViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCollectViewCell.m; sourceTree = "<group>"; };
-		D7E6A1341999D9E200E40536 /* ALToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToolBarView.h; sourceTree = "<group>"; };
-		D7E6A1351999D9E200E40536 /* ALToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALToolBarView.m; sourceTree = "<group>"; };
 		D7E6A137199A143600E40536 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,6 +292,7 @@
 				D7D483F1199CAB2E00223DF1 /* ALCollectViewController.m */,
 				D7827BF7199DD15300E17926 /* ALLocateViewController.h */,
 				D7827BF8199DD15300E17926 /* ALLocateViewController.m */,
+				D7827BFE199DF42E00E17926 /* UUIDPlist.plist */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -367,8 +367,6 @@
 		D7E6A1331999D97000E40536 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D7E6A1341999D9E200E40536 /* ALToolBarView.h */,
-				D7E6A1351999D9E200E40536 /* ALToolBarView.m */,
 				D7BB2ECF199B736700F03CCD /* ALGoodsListTableViewCell.h */,
 				D7BB2ED0199B736700F03CCD /* ALGoodsListTableViewCell.m */,
 				D7D483CD199C461000223DF1 /* ALGoodsListTableViewCell.xib */,
@@ -459,6 +457,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7827BFF199DF42E00E17926 /* UUIDPlist.plist in Resources */,
 				D7BB2EC9199B553500F03CCD /* 店铺弹出消息.png in Resources */,
 				D72AAC0D1998D004009EFBC0 /* btn_right_share.png in Resources */,
 				D7E6A138199A143600E40536 /* 3.jpg in Resources */,
@@ -508,7 +507,6 @@
 				D7827BF9199DD15300E17926 /* ALLocateViewController.m in Sources */,
 				D72AABEA1998B080009EFBC0 /* ALLeftViewController.m in Sources */,
 				A28740871998A30500DC9655 /* main.m in Sources */,
-				D7E6A1361999D9E200E40536 /* ALToolBarView.m in Sources */,
 				D7BB2ED1199B736700F03CCD /* ALGoodsListTableViewCell.m in Sources */,
 				D7D483E8199C7B1C00223DF1 /* UIViewExt.m in Sources */,
 				D7D483EC199C7F8E00223DF1 /* ALSettingViewController.m in Sources */,
@@ -651,8 +649,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppLocate/AppLocate-Prefix.pch";
 				INFOPLIST_FILE = "AppLocate/AppLocate-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -667,8 +667,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppLocate/AppLocate-Prefix.pch";
 				INFOPLIST_FILE = "AppLocate/AppLocate-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

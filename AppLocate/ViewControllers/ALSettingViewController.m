@@ -71,17 +71,17 @@
      _notifyOnDisplaySwitch = [[UISwitch alloc]initWithFrame:CGRectMake(kDeviceWidth-60, 5, 40, 20)];
     [_notifyOnDisplaySwitch addTarget:self action:@selector(notifyOnDisplay:) forControlEvents:UIControlEventValueChanged];
     
-    _uuidTextField = [[UITextField alloc]initWithFrame:CGRectMake(kDeviceWidth-250, 5, 240, 30)];
+    _uuidTextField = [[UITextField alloc]initWithFrame:CGRectMake(kDeviceWidth-250, 8, 240, 30)];
     _uuidTextField.placeholder = @"UUID";
     _uuidTextField.userInteractionEnabled = NO;
     _uuidTextField.textAlignment = NSTextAlignmentRight;
     
-    _majorTextField = [[UITextField alloc]initWithFrame:CGRectMake(kDeviceWidth-250, 5, 240, 30)];
+    _majorTextField = [[UITextField alloc]initWithFrame:CGRectMake(kDeviceWidth-250, 8, 240, 30)];
     _majorTextField.placeholder = @"Major";
     _majorTextField.delegate = self;
     _majorTextField.textAlignment = NSTextAlignmentRight;
     
-    _minorTextField = [[UITextField alloc]initWithFrame:CGRectMake(kDeviceWidth-250, 5, 240, 30)];
+    _minorTextField = [[UITextField alloc]initWithFrame:CGRectMake(kDeviceWidth-250, 8, 240, 30)];
     _minorTextField.placeholder = @"Minor";
     _minorTextField.delegate = self;
     _minorTextField.textAlignment = NSTextAlignmentRight;

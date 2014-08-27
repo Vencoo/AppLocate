@@ -92,13 +92,13 @@
 // pagecontrol 选择器的方法
 - (void)turnPage
 {
-    int page = _pageControl.currentPage; // 获取当前的page
+    NSInteger page = _pageControl.currentPage; // 获取当前的page
     [_scrollView scrollRectToVisible:CGRectMake(kDeviceWidth*(page+1),0,kDeviceWidth,_scrollView.frame.size.height) animated:NO]; // 触摸pagecontroller那个点点 往后翻一页 +1
 }
 // 定时器 绑定的方法
 - (void)runTimePage
 {
-    int page = _pageControl.currentPage; // 获取当前的page
+    NSInteger page = _pageControl.currentPage; // 获取当前的page
     page++;
     page = page > (_images.count-1) ? 0 : page ;
     _pageControl.currentPage = page;

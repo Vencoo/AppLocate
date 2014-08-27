@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>74278BDA-B644-4520-8F0C-720EAF059935</key>
+	<dict>
+		<key>Name</key>
+		<string>肯德基</string>
+		<key>pointX</key>
+		<string>150</string>
+		<key>pointY</key>
+		<string>150</string>
+	</dict>
+	<key>5A4BCFCE-174E-4BAC-A814-092E77F6B7E5</key>
+	<dict>
+		<key>Name</key>
+		<string>阿迪达斯专卖店</string>
+		<key>pointX</key>
+		<string>120</string>
+		<key>pointY</key>
+		<string>120</string>
+	</dict>
+	<key>E2C56DB5-DFFB-48D2-B060-D0F5A71096E0</key>
+	<dict>
+		<key>Name</key>
+		<string>欧美顶级品牌直销店</string>
+		<key>pointX</key>
+		<string>100</string>
+		<key>pointY</key>
+		<string>100</string>
+	</dict>
+</dict>
+</plist>

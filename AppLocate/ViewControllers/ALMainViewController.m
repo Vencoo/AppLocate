@@ -7,7 +7,6 @@
 //
 
 #import "ALMainViewController.h"
-#import "ALToolBarView.h"
 #import "ALLeftViewController.h"
 #import "ALDetailViewController.h"
 #import "ALGoodsListViewController.h"
@@ -24,6 +23,7 @@
 
 @interface ALMainViewController ()
 {
+    //所有试图控制器
     ALLeftViewController *_leftVC;
     ALDetailViewController *_detailVC;
     ALGoodsListViewController *_goodsListVC;
@@ -31,15 +31,14 @@
     ALCollectViewController *_collecVC;
     ALLocateViewController *_locateVC;
     
-    ALToolBarView *_toolBarView;
-    
 }
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
-
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIButton *listButton;
 @property (strong, nonatomic) IBOutlet UIButton *navButton;
 @property (strong, nonatomic) IBOutlet UIButton *upButton;
+
+@property (retain, nonatomic) UILabel *label;
 
 @end
 
@@ -64,6 +63,19 @@
     [super viewDidLoad];
 //    _toolBarView = [[ALToolBarView alloc]initWithFrame:self.view.bounds];
 //    [self.view addSubview:_toolBarView];
+    if (_locateVC == nil) {
+        _locateVC = [[ALLocateViewController alloc]init];
+        [_locateVC beaconsStart];
+        [self bgDownViewAddInViewController:_locateVC];
+    }
+    
+    _label = [[UILabel alloc]initWithFrame:CGRectMake(0, IOSVersion>=7.0?20:0, kDeviceWidth, 40)];
+    _label.alpha = 0.5;
+    _label.text = @"正在搜索...";
+    _label.backgroundColor = [UIColor clearColor];
+    _label.textColor = [UIColor blackColor];
+
+    [self.view addSubview:_label];
     
     _imageView.image = [UIImage imageNamed:@"bg_dowm.png"];
     //创建按钮
@@ -79,6 +91,16 @@
     [_upButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     _upButton.tag = btnUp;
     // Do any additional setup after loading the view.
+    [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(updateLocate) userInfo:nil repeats:YES];
+}
+
+- (void)updateLocate
+{
+    [_locateVC beaconsStart];
+    if ([[NSUserDefaults standardUserDefaults]objectForKey:@"beacon"] != nil) {
+        _label.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"beacon"];
+        NSLog(@"%@",_label.text);
+    }
 }
 
 - (void)buttonClick:(UIButton *)button
@@ -170,6 +192,8 @@
             break;
         case btnNav:
         {
+            //更新位置信息
+            [self updateLocate];
             //改变背景图片
             static int i = 1;
             NSString *imageStrng = [NSString stringWithFormat:@"%d.jpg",i];
@@ -204,6 +228,7 @@
         _goodsListVC = [[ALGoodsListViewController alloc]init];
         [self bgDownViewAddInViewController:_goodsListVC];
     }
+    //点击view 移除弹出框和手势
     [_goodsListVC tap];
     [self presentViewController:_goodsListVC animated:YES completion:^{
     
@@ -238,21 +263,16 @@
 
 - (void)presentLocateViewController
 {
-    if (_locateVC == nil) {
-        _locateVC = [[ALLocateViewController alloc]init];
-        [self bgDownViewAddInViewController:_locateVC];
-    }
     [self presentViewController:_locateVC animated:YES completion:^{
         
         
     }];
-
 }
 
 //添加返回界面
 - (void)bgDownViewAddInViewController:(UIViewController*)viewController
 {
-    UIImageView *bgDownImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, IOSVersion>=7.0?KDeviceHeight-64:KDeviceHeight-64-20, kDeviceWidth, 64)];
+    UIImageView *bgDownImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, IOSVersion>=7.0?KDeviceHeight-64:KDeviceHeight-64-20, kDeviceWidth, IOSVersion>=7.0?64:44)];
     bgDownImageView.userInteractionEnabled = YES;
     bgDownImageView.image = [UIImage imageNamed:@"bg_dowm.png"];
     [viewController.view addSubview:bgDownImageView];

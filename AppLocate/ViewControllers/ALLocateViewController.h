@@ -10,4 +10,6 @@
 
 @interface ALLocateViewController : ALBaseViewController
 
+- (void)beaconsStart;
+
 @end

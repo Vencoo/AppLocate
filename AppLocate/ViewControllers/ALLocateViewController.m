@@ -40,7 +40,7 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    _isFindLocate = NO;
+    _isFindLocate = YES;
     
     _label = [[UILabel alloc]initWithFrame:CGRectMake(0, IOSVersion>=7.0?20:0, kDeviceWidth, 50)];
     _label.text = @"搜索界面";
@@ -53,32 +53,41 @@
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
     
-    self.beacons = [[NSMutableDictionary alloc] init];
+ 
     
+    }
+
+- (void)beaconsStart
+{
+    NSLog(@"start");
+    if (self.beacons == nil) {
+        self.beacons = [[NSMutableDictionary alloc] init];
+    }
     // This location manager will be used to demonstrate how to range beacons.
-    self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.delegate = self;
-    
+    if (self.locationManager == nil) {
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+    }
     // Populate the regions we will range once.
-    self.rangedRegions = [[NSMutableDictionary alloc] init];
-    
+    if (self.rangedRegions == nil) {
+        self.rangedRegions = [[NSMutableDictionary alloc] init];
+    }
     for (NSUUID *uuid in [APLDefaults sharedDefaults].supportedProximityUUIDs)
     {
         CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:[uuid UUIDString]];
         self.rangedRegions[region] = [NSArray array];
     }
-
+    for (CLBeaconRegion *region in self.rangedRegions)
+    {
+        NSLog(@"22");
+        [self.locationManager startRangingBeaconsInRegion:region];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
     // Start ranging when the view appears.
-    for (CLBeaconRegion *region in self.rangedRegions)
-    {
-        [self.locationManager startRangingBeaconsInRegion:region];
-    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -102,6 +111,10 @@
      regions.  It will be displayed multiple times if that is the case.  If that is not desired,
      use a set instead of an array.
      */
+    NSLog(@"start2");
+    //找到RangeBeacons返回yes
+    _isFindLocate = YES;
+    
     self.rangedRegions[region] = beacons;
     [self.beacons removeAllObjects];
     
@@ -121,6 +134,27 @@
         }
     }
     
+    if (self.beacons != nil) {
+        NSNumber *sectionKey = [[self.beacons allKeys] firstObject];
+        if (sectionKey == nil) {
+            NSLog(@"sectionKey == nil");
+            _isFindLocate = NO;
+        }
+        CLBeacon *beacon = [self.beacons[sectionKey] firstObject];
+        NSString *formatString = NSLocalizedString(@"距离最近店铺: %.2fm", @"Format string for ranging table cells.");
+        [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:formatString, beacon.accuracy] forKey:@"beacon"];
+    }
+
+    [_tableView reloadData];
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region
+              withError:(NSError *)error
+{
+     NSLog(@"startError");
+    _isFindLocate = NO;
+    [[NSUserDefaults standardUserDefaults]setObject:@"未搜索到目标..." forKey:@"beacon"];
     [_tableView reloadData];
 }
 
@@ -130,17 +164,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    if ( _isFindLocate == NO) {
+        return 1;
+    }
     return self.beacons.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
+    if ( _isFindLocate == NO) {
+        return 1;
+    }
     NSArray *sectionValues = [self.beacons allValues];
     return [sectionValues[section] count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
+    if ( _isFindLocate == NO) {
+        return @"未知";
+    }
     NSString *title;
     NSArray *sectionKeys = [self.beacons allKeys];
     
@@ -150,7 +193,7 @@
     switch([sectionKey integerValue])
     {
         case CLProximityImmediate:
-            title = NSLocalizedString(@"直接", @"Immediate section header title");
+            title = NSLocalizedString(@"附近", @"Immediate section header title");
             break;
             
         case CLProximityNear:
@@ -171,15 +214,34 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"tableView");
+    if ( _isFindLocate == NO) {
+         UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+        cell.textLabel.text = @"未搜索到目标...";
+        return cell;
+    }
+ 
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
     // Display the UUID, major, minor and accuracy for each beacon.
     NSNumber *sectionKey = [self.beacons allKeys][indexPath.section];
     CLBeacon *beacon = self.beacons[sectionKey][indexPath.row];
-    cell.textLabel.text = [beacon.proximityUUID UUIDString];
     
-    NSString *formatString = NSLocalizedString(@"Major: %@, Minor: %@, 距离: %.2fm", @"Format string for ranging table cells.");
-    cell.detailTextLabel.text = [NSString stringWithFormat:formatString, beacon.major, beacon.minor, beacon.accuracy];
-	
+    NSString* plistfile = [[NSBundle mainBundle]pathForResource:@"UUIDPlist" ofType:@"plist"];
+    NSDictionary* data = [[NSDictionary alloc]initWithContentsOfFile:plistfile];
+    NSDictionary *dic = [data objectForKey:[beacon.proximityUUID UUIDString]];
+    if (dic != NULL)
+    {
+        cell.textLabel.text = [dic objectForKey:@"Name"];
+    }
+    else
+    {
+        cell.textLabel.text = [beacon.proximityUUID UUIDString];
+    }
+    NSString *formatString = NSLocalizedString(@"距离最近店铺: %.2fm", @"Format string for ranging table cells.");
+    cell.detailTextLabel.text = [NSString stringWithFormat:formatString, beacon.accuracy];
+    if (indexPath.row == 0 && indexPath.section ==0) {
+        [[NSUserDefaults standardUserDefaults]setObject:[beacon.proximityUUID UUIDString] forKey:@"UUID"];
+    }
     return cell;
 }
 
