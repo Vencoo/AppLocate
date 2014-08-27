@@ -31,6 +31,8 @@
     ALCollectViewController *_collecVC;
     ALLocateViewController *_locateVC;
     
+    NSTimer *_timer;
+    
 }
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
@@ -91,7 +93,7 @@
     [_upButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     _upButton.tag = btnUp;
     // Do any additional setup after loading the view.
-    [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(updateLocate) userInfo:nil repeats:YES];
+    _timer =  [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateLocate) userInfo:nil repeats:YES];
 }
 
 - (void)updateLocate
