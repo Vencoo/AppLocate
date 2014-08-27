@@ -14,6 +14,7 @@
 		A28740871998A30500DC9655 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A28740861998A30500DC9655 /* main.m */; };
 		A287408B1998A30500DC9655 /* ALAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A287408A1998A30500DC9655 /* ALAppDelegate.m */; };
 		A287408E1998A30500DC9655 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A287408C1998A30500DC9655 /* Main.storyboard */; };
+		A28740931998A30500DC9655 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A28740921998A30500DC9655 /* Images.xcassets */; };
 		A287409A1998A30500DC9655 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28740991998A30500DC9655 /* XCTest.framework */; };
 		A287409B1998A30500DC9655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287407A1998A30400DC9655 /* Foundation.framework */; };
 		A287409C1998A30500DC9655 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287407E1998A30500DC9655 /* UIKit.framework */; };
@@ -21,11 +22,6 @@
 		A28740A61998A30500DC9655 /* AppLocateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A28740A51998A30500DC9655 /* AppLocateTests.m */; };
 		A28740B81998A39200DC9655 /* ALBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28740B71998A39200DC9655 /* ALBaseViewController.m */; };
 		A28740BB1998A3C000DC9655 /* ALBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A28740BA1998A3C000DC9655 /* ALBaseModel.m */; };
-		A2C2DA2E19AD74150011BCBF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A2C2DA2D19AD74150011BCBF /* icon.png */; };
-		A2C2DA3019AD745A0011BCBF /* ALImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C2DA2F19AD745A0011BCBF /* ALImage.xcassets */; };
-		A2C2DA3319AD763D0011BCBF /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2C2DA3119AD763D0011BCBF /* 2.jpg */; };
-		A2C2DA3419AD763D0011BCBF /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2C2DA3219AD763D0011BCBF /* 1.jpg */; };
-		A2C2DA3619AD76970011BCBF /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2C2DA3519AD76970011BCBF /* 3.jpg */; };
 		D72AAB921998AA4E009EFBC0 /* ALMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D72AAB911998AA4E009EFBC0 /* ALMainViewController.m */; };
 		D72AABEA1998B080009EFBC0 /* ALLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D72AABE91998B080009EFBC0 /* ALLeftViewController.m */; };
 		D72AABEF1998C468009EFBC0 /* ALDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D72AABEE1998C468009EFBC0 /* ALDetailViewController.m */; };
@@ -42,6 +38,8 @@
 		D72AAC0F1998D004009EFBC0 /* btn_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = D72AABFE1998D004009EFBC0 /* btn_setting.png */; };
 		D72AAC101998D004009EFBC0 /* btn_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D72AABFF1998D004009EFBC0 /* btn_up@2x.png */; };
 		D72AAC111998D004009EFBC0 /* pic_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D72AAC001998D004009EFBC0 /* pic_default@2x.png */; };
+		D72AAC171998D331009EFBC0 /* 1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D72AAC151998D331009EFBC0 /* 1@2x.jpg */; };
+		D72AAC181998D331009EFBC0 /* 2@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D72AAC161998D331009EFBC0 /* 2@2x.jpg */; };
 		D72AAC1B1998D417009EFBC0 /* ALGoodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D72AAC1A1998D417009EFBC0 /* ALGoodsListViewController.m */; };
 		D7827BF1199DB6A600E17926 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7827BF0199DB6A600E17926 /* CoreBluetooth.framework */; };
 		D7827BF3199DB6B400E17926 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7827BF2199DB6B400E17926 /* CoreLocation.framework */; };
@@ -63,11 +61,7 @@
 		D7D483F2199CAB2E00223DF1 /* ALCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D483F1199CAB2E00223DF1 /* ALCollectViewController.m */; };
 		D7D483F7199CB04100223DF1 /* ALCollectViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7D483F6199CB04100223DF1 /* ALCollectViewCell.xib */; };
 		D7D483FA199CB66000223DF1 /* ALCollectViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D483F9199CB66000223DF1 /* ALCollectViewCell.m */; };
-<<<<<<< HEAD
 		D7E6A138199A143600E40536 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7E6A137199A143600E40536 /* 3.jpg */; };
-=======
-		D7E6A1361999D9E200E40536 /* ALToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6A1351999D9E200E40536 /* ALToolBarView.m */; };
->>>>>>> FETCH_HEAD
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +86,7 @@
 		A28740891998A30500DC9655 /* ALAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALAppDelegate.h; sourceTree = "<group>"; };
 		A287408A1998A30500DC9655 /* ALAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALAppDelegate.m; sourceTree = "<group>"; };
 		A287408D1998A30500DC9655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A28740921998A30500DC9655 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A28740981998A30500DC9655 /* AppLocateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppLocateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A28740991998A30500DC9655 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A28740A11998A30500DC9655 /* AppLocateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppLocateTests-Info.plist"; sourceTree = "<group>"; };
@@ -101,11 +96,6 @@
 		A28740B71998A39200DC9655 /* ALBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALBaseViewController.m; sourceTree = "<group>"; };
 		A28740B91998A3C000DC9655 /* ALBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALBaseModel.h; sourceTree = "<group>"; };
 		A28740BA1998A3C000DC9655 /* ALBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALBaseModel.m; sourceTree = "<group>"; };
-		A2C2DA2D19AD74150011BCBF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		A2C2DA2F19AD745A0011BCBF /* ALImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ALImage.xcassets; sourceTree = "<group>"; };
-		A2C2DA3119AD763D0011BCBF /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
-		A2C2DA3219AD763D0011BCBF /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		A2C2DA3519AD76970011BCBF /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		D72AAB901998AA4E009EFBC0 /* ALMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMainViewController.h; sourceTree = "<group>"; };
 		D72AAB911998AA4E009EFBC0 /* ALMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMainViewController.m; sourceTree = "<group>"; };
 		D72AABE81998B080009EFBC0 /* ALLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALLeftViewController.h; sourceTree = "<group>"; };
@@ -125,6 +115,8 @@
 		D72AABFE1998D004009EFBC0 /* btn_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_setting.png; sourceTree = "<group>"; };
 		D72AABFF1998D004009EFBC0 /* btn_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_up@2x.png"; sourceTree = "<group>"; };
 		D72AAC001998D004009EFBC0 /* pic_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pic_default@2x.png"; sourceTree = "<group>"; };
+		D72AAC151998D331009EFBC0 /* 1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1@2x.jpg"; sourceTree = "<group>"; };
+		D72AAC161998D331009EFBC0 /* 2@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2@2x.jpg"; sourceTree = "<group>"; };
 		D72AAC191998D417009EFBC0 /* ALGoodsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALGoodsListViewController.h; sourceTree = "<group>"; };
 		D72AAC1A1998D417009EFBC0 /* ALGoodsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALGoodsListViewController.m; sourceTree = "<group>"; };
 		D7827BF0199DB6A600E17926 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -156,12 +148,7 @@
 		D7D483F6199CB04100223DF1 /* ALCollectViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALCollectViewCell.xib; sourceTree = "<group>"; };
 		D7D483F8199CB66000223DF1 /* ALCollectViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALCollectViewCell.h; sourceTree = "<group>"; };
 		D7D483F9199CB66000223DF1 /* ALCollectViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALCollectViewCell.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		D7E6A137199A143600E40536 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
-=======
-		D7E6A1341999D9E200E40536 /* ALToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToolBarView.h; sourceTree = "<group>"; };
-		D7E6A1351999D9E200E40536 /* ALToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALToolBarView.m; sourceTree = "<group>"; };
->>>>>>> FETCH_HEAD
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +212,6 @@
 		A28740801998A30500DC9655 /* AppLocate */ = {
 			isa = PBXGroup;
 			children = (
-				A2C2DA2D19AD74150011BCBF /* icon.png */,
 				D72AABF21998D004009EFBC0 /* Images */,
 				A28740AF1998A37700DC9655 /* Datas */,
 				D7D483E5199C7B0B00223DF1 /* Globals */,
@@ -244,7 +230,7 @@
 				A28740891998A30500DC9655 /* ALAppDelegate.h */,
 				A287408A1998A30500DC9655 /* ALAppDelegate.m */,
 				A287408C1998A30500DC9655 /* Main.storyboard */,
-				A2C2DA2F19AD745A0011BCBF /* ALImage.xcassets */,
+				A28740921998A30500DC9655 /* Images.xcassets */,
 				A28740821998A30500DC9655 /* AppLocate-Info.plist */,
 				A28740831998A30500DC9655 /* InfoPlist.strings */,
 				A28740861998A30500DC9655 /* main.m */,
@@ -341,9 +327,9 @@
 				D7BB2EC8199B553500F03CCD /* 店铺弹出消息.png */,
 				D7BB2EC6199B553000F03CCD /* 店铺缩略图.png */,
 				D7BB2EBC199AF95400F03CCD /* ibeacon搜索.jpg */,
-				A2C2DA3119AD763D0011BCBF /* 2.jpg */,
-				A2C2DA3519AD76970011BCBF /* 3.jpg */,
-				A2C2DA3219AD763D0011BCBF /* 1.jpg */,
+				D7E6A137199A143600E40536 /* 3.jpg */,
+				D72AAC151998D331009EFBC0 /* 1@2x.jpg */,
+				D72AAC161998D331009EFBC0 /* 2@2x.jpg */,
 			);
 			path = TempImages;
 			sourceTree = "<group>";
@@ -474,25 +460,24 @@
 				D7827BFF199DF42E00E17926 /* UUIDPlist.plist in Resources */,
 				D7BB2EC9199B553500F03CCD /* 店铺弹出消息.png in Resources */,
 				D72AAC0D1998D004009EFBC0 /* btn_right_share.png in Resources */,
+				D7E6A138199A143600E40536 /* 3.jpg in Resources */,
 				D72AAC071998D004009EFBC0 /* btn_dowm@2x.png in Resources */,
+				A28740931998A30500DC9655 /* Images.xcassets in Resources */,
 				D72AAC041998D004009EFBC0 /* bg_dowm.png in Resources */,
 				D7BB2EC7199B553000F03CCD /* 店铺缩略图.png in Resources */,
-				A2C2DA2E19AD74150011BCBF /* icon.png in Resources */,
+				D72AAC171998D331009EFBC0 /* 1@2x.jpg in Resources */,
 				D72AAC101998D004009EFBC0 /* btn_up@2x.png in Resources */,
 				D7D483D2199C53EA00223DF1 /* 1.png in Resources */,
 				D72AAC0A1998D004009EFBC0 /* btn_nav.png in Resources */,
 				D7BB2EBD199AF95400F03CCD /* ibeacon搜索.jpg in Resources */,
-				A2C2DA3019AD745A0011BCBF /* ALImage.xcassets in Resources */,
-				A2C2DA3319AD763D0011BCBF /* 2.jpg in Resources */,
-				A2C2DA3419AD763D0011BCBF /* 1.jpg in Resources */,
 				A28740851998A30500DC9655 /* InfoPlist.strings in Resources */,
 				D72AAC091998D004009EFBC0 /* btn_list.png in Resources */,
 				D72AAC0B1998D004009EFBC0 /* btn_right_fav.png in Resources */,
 				A287408E1998A30500DC9655 /* Main.storyboard in Resources */,
 				D7D483E0199C60F200223DF1 /* image2.png in Resources */,
 				D7D483DF199C60F200223DF1 /* image1.png in Resources */,
-				A2C2DA3619AD76970011BCBF /* 3.jpg in Resources */,
 				D72AAC0E1998D004009EFBC0 /* btn_search.png in Resources */,
+				D72AAC181998D331009EFBC0 /* 2@2x.jpg in Resources */,
 				D72AAC0F1998D004009EFBC0 /* btn_setting.png in Resources */,
 				D72AAC0C1998D004009EFBC0 /* btn_right_list.png in Resources */,
 				D7D483F7199CB04100223DF1 /* ALCollectViewCell.xib in Resources */,
