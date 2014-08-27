@@ -195,12 +195,12 @@
             //更新位置信息
             [self updateLocate];
             //改变背景图片
-            static int i = 1;
-            NSString *imageStrng = [NSString stringWithFormat:@"%d.jpg",i];
+            static int indexImage = 1;
+            NSString *imageStrng = [NSString stringWithFormat:@"%d.jpg",indexImage];
             _backgroundImageView.image = [UIImage imageNamed:imageStrng];
-            i++;
-            if (i == 3) {
-                i = 1;
+            indexImage++;
+            if (indexImage > 3) {
+                indexImage = 1;
             }
         }
             break;
